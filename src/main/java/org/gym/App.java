@@ -21,16 +21,20 @@ public class App
         );
         List<Combination> combinations = new ArrayList<>(Arrays.asList(combination_1, combination_2, combination_3));
 
-        for (Combination combination: combinations) {
-            LinkedHashSet<MuscleGroup> muscleGroupSet = combination.getCombination();
-            for (MuscleGroup muscleGroup: muscleGroupSet) {
-               LinkedHashSet<SubGroup> subGroupSet =  muscleGroup.getSubGroups();
-                for (SubGroup subGroup : subGroupSet) {
-                    LinkedHashSet<Workout> workouts = subGroup.getWorkouts();
-                    System.out.println(workouts);
-                }
-            }
+        int input = 0;
+        int rotation = input % 3;
 
+        Combination todaysCombination = combinations.get(rotation);
+
+        LinkedHashSet<MuscleGroup> muscleGroupSet = todaysCombination.getCombination();
+        for (MuscleGroup muscleGroup: muscleGroupSet) {
+            LinkedHashSet<SubGroup> subGroupSet =  muscleGroup.getSubGroups();
+            for (SubGroup subGroup : subGroupSet) {
+                LinkedHashSet<Workout> workouts = subGroup.getWorkouts();
+                Object[] todaysWorkouts = workouts.toArray();
+                int size = todaysWorkouts.length;
+                System.out.println(todaysWorkouts[input % size]);
+            }
         }
     }
 
