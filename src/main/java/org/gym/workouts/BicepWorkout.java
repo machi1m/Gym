@@ -3,4 +3,26 @@ package org.gym.workouts;
 import org.gym.Workout;
 
 public enum BicepWorkout implements Workout {
+    NEUTRAL_GRIP_ROPE_CURLS,
+    EXTERNAL_ROTATION_ROPE_CURLS,
+    DB_CURLS_ALT_STAND,
+    SPIDER_CURLS_ALT,
+
+
+
+
+    DB_HAMMER_CURLS_STAND,
+    SEATED_CONCENTRATION_CURLS,
+    SEATED_NEUTRAL_GRIP_CONCENTRATION_CURLS,
+    HAMMER_CYCLIC_CURLS,
+
+
+
+
+    HIGH_PULLEY_BICEP_CURLS_SINGLE_ARM,
+    DRAG_CURLS,
+    CROSS_NEUTRAL_GRIP_MID_CHEST,
+    EZ_BAR_CURLS,
+
+
 }
