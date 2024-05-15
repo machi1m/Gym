@@ -21,7 +21,7 @@ public class App
         );
         List<Combination> combinations = new ArrayList<>(Arrays.asList(combination_1, combination_2, combination_3));
 
-        int input = 0;
+        int input = Integer.parseInt(args[0]);
         int rotation = input % 3;
 
         Combination todaysCombination = combinations.get(rotation);
